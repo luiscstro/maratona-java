@@ -14,7 +14,7 @@ painel de informações, seleção, pesquisa — com um extra: **você pode edit
 ### Publicar com o GitHub Pages
 
 1. No repositório: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-2. Faça o merge desta branch na `main`. O workflow `.github/workflows/pages.yml` publica o site em
+2. Faça o merge desta branch na `master` (ou `main`). O workflow `.github/workflows/pages.yml` publica o site em
    `https://<usuario>.github.io/<repositorio>/`.
 
 Para testar no computador: `python3 -m http.server 8000` na raiz do projeto e abra `http://localhost:8000`.
