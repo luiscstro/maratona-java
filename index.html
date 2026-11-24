@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Fotos">
+  <meta name="format-detection" content="telephone=no">
+  <title>Fotos</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ FOTOTECA ============ -->
+  <main id="library" class="screen">
+    <div class="scroller bottom" id="libScroll">
+      <div class="grid" id="libGrid"></div>
+      <div class="empty" id="libEmpty" hidden></div>
+    </div>
+    <header class="lg-header">
+      <div class="lg-row">
+        <div class="lg-titles">
+          <h1 id="libTitle">Fototeca</h1>
+          <div class="lg-sub" id="libSub">0 Itens</div>
+        </div>
+        <div class="lg-actions">
+          <button class="hbtn glass" id="btnFilter" aria-label="Filtros e opções"></button>
+          <button class="hpill glass" id="btnSelect">Selecionar</button>
+        </div>
+      </div>
+    </header>
+  </main>
+
+  <!-- ============ COLEÇÕES ============ -->
+  <main id="collections" class="screen" hidden>
+    <div class="scroller" id="colScroll"></div>
+    <header class="lg-header">
+      <div class="lg-row"><div class="lg-titles"><h1>Coleções</h1></div></div>
+    </header>
+  </main>
+
+  <div class="bottom-fade"></div>
+
+  <!-- barra de abas -->
+  <nav class="tabbar" id="tabbar">
+    <div class="tab-pill glass">
+      <button class="tab active" data-tab="library"><span class="tab-ic" id="icLib"></span><span>Fototeca</span></button>
+      <button class="tab" data-tab="collections"><span class="tab-ic" id="icCol"></span><span>Coleções</span></button>
+    </div>
+    <button class="search-btn glass" id="btnSearch" aria-label="Pesquisar"></button>
+  </nav>
+
+  <!-- barra de seleção -->
+  <div class="selbar" id="selbar">
+    <button class="tbtn glass" id="selShare" aria-label="Compartilhar"></button>
+    <div class="tpill glass sel-center"><span id="selLabel">Selecionar Itens</span></div>
+    <button class="tbtn glass" id="selMore" aria-label="Mais"></button>
+    <button class="tbtn glass" id="selTrash" aria-label="Apagar"></button>
+  </div>
+
+  <!-- ============ ÁLBUM / DETALHE ============ -->
+  <section id="album" class="overlay page" hidden>
+    <div class="scroller bottom" id="albumScroll"><div class="grid" id="albumGrid"></div><div class="empty" id="albumEmpty" hidden></div></div>
+    <header class="top-bar">
+      <button class="hbtn glass" id="albumBack" aria-label="Voltar"></button>
+      <div class="top-title glass" id="albumTitle"></div>
+      <button class="hbtn glass" id="albumMore" aria-label="Mais"></button>
+    </header>
+  </section>
+
+  <!-- ============ PESQUISA ============ -->
+  <section id="search" class="overlay page" hidden>
+    <div class="scroller" id="searchScroll">
+      <h2 class="search-h" id="searchH">Pesquisar</h2>
+      <div class="grid" id="searchGrid"></div>
+      <div class="empty" id="searchEmpty" hidden></div>
+    </div>
+    <div class="search-bar">
+      <div class="search-field glass">
+        <span class="sf-ic" id="sfIc"></span>
+        <input id="searchInput" type="search" placeholder="Pesquisar" enterkeyhint="search" autocomplete="off" autocapitalize="none">
+        <button class="sf-x" id="sfClear" aria-label="Limpar" hidden></button>
+      </div>
+      <button class="search-close glass" id="searchClose" aria-label="Fechar"></button>
+    </div>
+  </section>
+
+  <!-- ============ VISUALIZADOR ============ -->
+  <section id="viewer" class="overlay" hidden>
+    <div class="v-bg"></div>
+    <div class="v-stage" id="vStage"></div>
+    <header class="top-bar v-chrome" id="vHeader">
+      <button class="hbtn glass" id="vBack" aria-label="Voltar"></button>
+      <div class="top-title glass" id="vTitle"><b></b><small></small></div>
+      <button class="hbtn glass" id="vMore" aria-label="Mais"></button>
+    </header>
+    <div class="v-strip v-chrome" id="vStrip"><div class="strip-inner" id="vStripInner"></div></div>
+    <div class="v-info" id="vInfo"></div>
+    <div class="v-toolbar v-chrome" id="vToolbar">
+      <button class="tbtn glass" id="vShare" aria-label="Compartilhar"></button>
+      <div class="tpill glass">
+        <button id="vFav" aria-label="Favoritar"></button>
+        <button id="vInfoBtn" aria-label="Informações"></button>
+        <button id="vAdjust" aria-label="Ajustar"></button>
+      </div>
+      <button class="tbtn glass" id="vTrash" aria-label="Apagar"></button>
+    </div>
+  </section>
+
+  <div id="overlay-root"></div>
+  <input type="file" id="fileInput" accept="image/*,video/*" multiple hidden>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
