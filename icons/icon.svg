@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <ellipse id="petal" cx="512" cy="340" rx="128" ry="172"/>
+  </defs>
+  <rect width="1024" height="1024" fill="#ffffff"/>
+  <g style="isolation:isolate">
+    <use href="#petal" fill="#FAA21B" transform="rotate(0 512 512)" style="mix-blend-mode:multiply"/>
+    <use href="#petal" fill="#FADB2B" transform="rotate(45 512 512)" style="mix-blend-mode:multiply"/>
+    <use href="#petal" fill="#79CB3E" transform="rotate(90 512 512)" style="mix-blend-mode:multiply"/>
+    <use href="#petal" fill="#22C4D2" transform="rotate(135 512 512)" style="mix-blend-mode:multiply"/>
+    <use href="#petal" fill="#2E7CF7" transform="rotate(180 512 512)" style="mix-blend-mode:multiply"/>
+    <use href="#petal" fill="#9055EA" transform="rotate(225 512 512)" style="mix-blend-mode:multiply"/>
+    <use href="#petal" fill="#F0509C" transform="rotate(270 512 512)" style="mix-blend-mode:multiply"/>
+    <use href="#petal" fill="#F6463F" transform="rotate(315 512 512)" style="mix-blend-mode:multiply"/>
+  </g>
+</svg>
