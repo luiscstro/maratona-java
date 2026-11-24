@@ -1,0 +1,76 @@
+<title>FitLife Diagrama de Objetos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{--bg:#f5f7fa;--fg:#1b2430;--muted:#5d6b7d;--box:#ffffff;--head:#dbe7ff;--line:#2f5fd0;--stroke:#8a98ad;--ok:#e8f6ef;
+--font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121821;--fg:#e8edf4;--muted:#9aa8ba;--box:#1b2432;--head:#25365a;--line:#7ea2ff;--stroke:#56657b;--ok:#1d3329;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121821;--fg:#e8edf4;--muted:#9aa8ba;--box:#1b2432;--head:#25365a;--line:#7ea2ff;--stroke:#56657b;--ok:#1d3329;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);padding-block:24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+h1{margin:0;font-size:1.4rem;text-wrap:balance}
+p{margin:0;color:var(--muted);line-height:1.5;max-width:65ch}
+.wrap{overflow-x:auto;background:var(--box);border:1px solid var(--stroke);border-radius:8px}
+svg{display:block;min-width:640px;width:100%;height:auto}
+.name{font:700 15px var(--mono);fill:var(--fg);text-decoration:underline}
+.attr{font:13px var(--mono);fill:var(--fg)}
+.obj{fill:var(--box);stroke:var(--stroke);stroke-width:1.5}
+.hd{fill:var(--head)}
+.lk{stroke:var(--line);stroke-width:2;fill:none}
+.lbl{font:600 13px var(--font);fill:var(--line)}
+.lbg{fill:var(--box)}
+ul{margin:0;padding-left:1.2em;color:var(--muted);line-height:1.6}
+</style>
+<main>
+<h1>FitLife, sexta às 19h</h1>
+<p>Diagrama de objetos: 5 objetos e 4 links. Nomes sublinhados no formato nome : Classe.</p>
+<div class="wrap">
+<svg viewBox="0 0 900 560" role="img" aria-label="Diagrama de objetos da FitLife">
+<!-- links -->
+<path class="lk" d="M250 170 L380 260"/>
+<path class="lk" d="M650 170 L520 260"/>
+<path class="lk" d="M130 170 L130 400"/>
+<path class="lk" d="M590 455 L310 455"/>
+<!-- link labels -->
+<rect class="lbg" x="278" y="196" width="76" height="22"/><text class="lbl" x="316" y="212" text-anchor="middle">assinou</text>
+<rect class="lbg" x="546" y="196" width="76" height="22"/><text class="lbl" x="584" y="212" text-anchor="middle">assinou</text>
+<rect class="lbg" x="92" y="274" width="76" height="22"/><text class="lbl" x="130" y="290" text-anchor="middle">segue</text>
+<rect class="lbg" x="414" y="444" width="76" height="22"/><text class="lbl" x="452" y="460" text-anchor="middle">montou</text>
+
+<!-- ana -->
+<rect class="obj" x="60" y="50" width="250" height="120" rx="3"/>
+<rect class="hd" x="60" y="50" width="250" height="34" rx="3"/>
+<text class="name" x="185" y="73" text-anchor="middle">ana : Aluno</text>
+<text class="attr" x="74" y="110">nome = "Ana Lima"</text>
+<text class="attr" x="74" y="136">cpf = "123.456.789-00"</text>
+<!-- bruno -->
+<rect class="obj" x="590" y="50" width="250" height="120" rx="3"/>
+<rect class="hd" x="590" y="50" width="250" height="34" rx="3"/>
+<text class="name" x="715" y="73" text-anchor="middle">bruno : Aluno</text>
+<text class="attr" x="604" y="110">nome = "Bruno Reis"</text>
+<text class="attr" x="604" y="136">cpf = "987.654.321-00"</text>
+<!-- mensal -->
+<rect class="obj" x="325" y="260" width="250" height="100" rx="3"/>
+<rect class="hd" x="325" y="260" width="250" height="34" rx="3"/>
+<text class="name" x="450" y="283" text-anchor="middle">mensal : Plano</text>
+<text class="attr" x="339" y="320">nome = "Mensal"</text>
+<text class="attr" x="339" y="344">valor = 99,90</text>
+<!-- hipertrofia -->
+<rect class="obj" x="10" y="400" width="300" height="100" rx="3"/>
+<rect class="hd" x="10" y="400" width="300" height="34" rx="3"/>
+<text class="name" x="160" y="423" text-anchor="middle">hipertrofia : Treino</text>
+<text class="attr" x="24" y="460">nome = "Hipertrofia"</text>
+<text class="attr" x="24" y="484">duracao = 45 (min)</text>
+<!-- carla -->
+<rect class="obj" x="590" y="400" width="300" height="110" rx="3"/>
+<rect class="hd" x="590" y="400" width="300" height="34" rx="3"/>
+<text class="name" x="740" y="423" text-anchor="middle">carla : Instrutor</text>
+<text class="attr" x="604" y="460">nome = "Carla"</text>
+<text class="attr" x="604" y="484">especialidade = "Musculação"</text>
+</svg>
+</div>
+<ul>
+<li>Ana e Bruno apontam para o mesmo objeto <b>mensal : Plano</b>.</li>
+<li>Só a Ana segue o treino. O Bruno não tem link com Treino.</li>
+<li>Carla montou o treino, então o link liga Instrutor a Treino.</li>
+</ul>
+</main>
